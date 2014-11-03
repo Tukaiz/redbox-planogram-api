@@ -9,6 +9,8 @@ gem 'spring', :group => :development
 
 gem 'mysql2'
 
+gem 'compass'
+
 group :development, :test do
   gem 'rspec'
   gem 'rspec-rails'
