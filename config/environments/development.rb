@@ -1,6 +1,14 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  # Setup Cross Origin Policy to allow angular app to make calls to app.
+  config.middleware.use Rack::Cors do
+    allow do
+      origins 'localhost:9000'
+      resource '*', :headers => :any, :methods => [:get, :post, :options, :delete]
+    end
+  end
+
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
