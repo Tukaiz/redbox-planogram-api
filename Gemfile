@@ -7,8 +7,22 @@ gem 'rails-api'
 
 gem 'spring', :group => :development
 
-
 gem 'mysql2'
+
+group :development, :test do
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'metric_fu'
+  gem 'simplecov', require: false
+  gem 'simplecov-rcov', require: false
+
+end
+
+group :development do
+  gem 'pry-rails'
+  gem 'rack-cors'
+  gem 'better_errors'
+end
 
 
 
